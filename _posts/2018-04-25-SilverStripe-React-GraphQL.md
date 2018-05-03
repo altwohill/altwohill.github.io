@@ -1,7 +1,4 @@
----
-layout: posts
-title: Getting Started with React, GraphQL, and SilverStripe
----
+# Getting Started with React, GraphQL, and SilverStripe
 
 I completed my first project using React, GraphQL, and SilverStripe recently. Whilst I've worked with SilverStripe since version 2.1 and React for the past year or so, this was my first time combining the two - and my first time bringing GraphQL into the mix.
 
