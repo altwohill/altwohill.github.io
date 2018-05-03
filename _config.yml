@@ -4,10 +4,11 @@ defaults:
       path: ""
     values:
       layout: "posts"
-      theme: jekyll-theme-tactile
-
+      
+theme: jekyll-theme-tactile
 name: "@altwohill"
 description: Web developer turned sysadmin turned web developer again
+timezone: Pacific/Auckland
 
 permalink: /:title/
 # Jekyll 3 now only supports Kramdown for Markdown
