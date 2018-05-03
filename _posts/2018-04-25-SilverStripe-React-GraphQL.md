@@ -11,7 +11,7 @@ It wasn't as easy or as straightforward as I'd hoped, so here are a random colle
 
 ## GraphQL is awesome! ##
 
-I first came across GraphQL at the SilverStripe Conference in Wellington back in 2017. It sang out to me as the answer to all the issues with traditional REST APIs. I loved the declarative nature of GraphQL and how you get exactly what you ask for. If you're unfamiliar with GraphQL I'd highly recommend this video by Aaron Carlino (aka Unclecheese)https://vimeo.com/206492203
+I first came across GraphQL at the SilverStripe Conference in Wellington back in 2017. It sang out to me as the answer to all the issues with traditional REST APIs. I loved the declarative nature of GraphQL and how you get exactly what you ask for. If you're unfamiliar with GraphQL I'd highly recommend [this video](https://vimeo.com/206492203) by Aaron Carlino (aka Unclecheese)
 
 ### You need the GraphiQL dev tools ###
 
@@ -44,11 +44,9 @@ Injector::inst()->get(IdentityStore::class)->logIn($member);
 
 ```
 
-WTF is Injector? WTF is IdentityStore? I don't know and I don't care but it seems this is what I need to use to log in 
-right now. ¯\\\_(ツ)\_/¯
+WTF is Injector? WTF is IdentityStore? I don't know and I don't care but it seems this is what I need to use to log in right now. ¯\\\_(ツ)\_/¯
 
-Most of the time you'll probably just want to use session based authentication, so the most straightforward way to log in
-is to get the user to log in via normal SilverStripe methods first before showing the react app.
+Most of the time you'll probably just want to use session based authentication, so the most straightforward way to log in is to get the user to log in via normal SilverStripe methods first before showing the react app.
 
 ```html
 
@@ -114,8 +112,7 @@ class MemberExtension extends DataExtension implements ScaffoldingProvider
 
 ```
 
-Other options are to use jwt. Check out this [repo](https://github.com/Firesphere/silverstripe-graphql-jwt). It didn't suit me in this case as I needed the 
-login to be the same whether accessing normal PHP pages or GraphQL. 
+Other options are to use jwt. Check out this [repo](https://github.com/Firesphere/silverstripe-graphql-jwt). It didn't suit me in this case as I needed the login to be the same whether accessing normal PHP pages or GraphQL.
 
 ## Use `create-react-app` ##
 
@@ -159,7 +156,7 @@ Now, if webpack is running it will connect directly to that, otherwise it will u
 
 There's probably something a lot smarter that you could do here, but I was in a hurry to ship and couldn't deal with parsing map files :P
 
-Instead, I hacked the build script in `package.json` to move my files to static names. 
+Instead, I hacked the build script in `package.json` to move my files to static names.
 
 ```json
 
@@ -201,7 +198,6 @@ private static $url_handlers = [
 ];
 
 ```
-
 
 ## Anything else? ##
 
