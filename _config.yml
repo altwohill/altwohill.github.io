@@ -1,4 +1,11 @@
-theme: jekyll-theme-tactile
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "posts"
+      theme: jekyll-theme-tactile
+
 name: "@altwohill"
 description: Web developer turned sysadmin turned web developer again
 
