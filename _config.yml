@@ -5,6 +5,7 @@ titter_username: altwohill
 github_username: altwohill
 google_analytics: UA-118749009-2
 lang: en_NZ
+baseurl: 'https://al.twohill.nz'
 defaults:
   - scope:
       path: ""
