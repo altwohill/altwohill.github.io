@@ -1,6 +1,6 @@
 ---
 title: Getting Started with React, GraphQL, and SilverStripe
-categories: [SilverStripe, React, GraphQL]
+categories: [Web]
 description: Just a collection of thoughts from my first project using these technologies
 ---
 

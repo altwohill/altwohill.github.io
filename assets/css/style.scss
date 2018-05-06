@@ -1,0 +1,22 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+th {
+    font-weight: bold;
+    text-align: left;
+}
+
+td {
+    text-align: left;
+    padding: 2px 5px;
+}
+ 
+tbody tr:nth-child(odd) {
+    background-color:#ccc6;
+}
+
+ul.menu li {
+    list-style: none;
+}
