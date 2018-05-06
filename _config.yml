@@ -1,16 +1,16 @@
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      layout: "posts"
-      
 theme: jekyll-theme-tactile
 name: "@altwohill"
-description: Web developer turned sysadmin turned web developer again
 timezone: Pacific/Auckland
-
-permalink: /:title/
+titter_username: altwohill
+github_username: altwohill
+google_analytics: UA-118749009-2
+lang: en_NZ
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+permalink: /:year/:title/
 # Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
   # Use GitHub flavored markdown, including triple backtick fenced code blocks
@@ -20,12 +20,7 @@ kramdown:
   syntax_highlighter_opts:
     # Use existing pygments syntax highlighting css
     css_class: 'highlight'
-
-# Set the Sass partials directory, as we're using @imports
-sass:
-  style: :expanded # You might prefer to minify using :compressed
-
 # Use the following plug-ins
-gems:
+plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem

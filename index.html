@@ -1,9 +1,24 @@
-<div class="posts">
-    <ul>
-        {% for post in site.posts %}
-          <li>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-</div>
+---
+permalink: /
+title: Hello world
+description: Web developer turned sysadmin turned web developer again
+
+---
+<h1>Hi! 🙋‍♂️</h1>
+
+<p>I'm Al, and I'm a Systems Engineer at <a href="https://codeblue.co.nz" title="Codeblue">Codeblue</a> as well as a web and mobile app developer for <a href="https://twohill.nz" title="Twohill &amp; Co">Twohill &amp; Co</a>.</p>
+<p>Outside of work I'm busy raising my daughter Evie 👼, and if I get a bit of spare time I like to brew 🍺and ride my Triumph 🏍.</p>
+
+<p>My previous blog sites have been lost in the mists of time, so I figured Github pages should be around for a while, and allow me to put my musings somewhere useful.</p>
+
+<p>Feel free to @ me <a href="https://twitter.com/altwohill" title="@altwohill on twitter">@altwohill</a></p>
+
+<h2>Recent posts</h2>
+
+<ul>
+{% for post in site.posts %}
+<li>
+  <a href="{{post.url}}" title="{{ post.title }}">{{ post.date | date: "%Y-%m-%d" }}: {{ post.title }}</a>
+</li>
+{% endfor %}
+</ul>

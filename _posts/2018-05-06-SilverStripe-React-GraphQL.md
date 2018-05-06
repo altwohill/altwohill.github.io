@@ -1,4 +1,8 @@
-# Getting Started with React, GraphQL, and SilverStripe
+---
+title: Getting Started with React, GraphQL, and SilverStripe
+categories: [SilverStripe, React, GraphQL]
+description: Just a collection of thoughts from my first project using these technologies
+---
 
 I completed my first project using React, GraphQL, and SilverStripe recently. Whilst I've worked with SilverStripe since version 2.1 and React for the past year or so, this was my first time combining the two - and my first time bringing GraphQL into the mix.
 
@@ -10,8 +14,6 @@ I first came across GraphQL at the SilverStripe Conference in Wellington back in
 
 ### You need the GraphiQL dev tools ###
 
-I don't know why they're not included but goddamn it you need them
-
 ```composer require silverstripe/graphql-devtools```
 
 Then you can go to `http://yoursite.local/dev/graphiql` and see all the query types you can make.
@@ -20,9 +22,13 @@ Then you can go to `http://yoursite.local/dev/graphiql` and see all the query ty
 
 silverstripe-graphql is iterating quickly. But the doco remains supurb. [This](https://github.com/silverstripe/silverstripe-graphql/blob/2/README.md) is really an invaluable resource.
 
+### If you use PhpStorm, use give my GraphQL helper a shot ###
+
+This won't be needed in the future as I hear there are changes being made to the silverstripe-graphql introspection, but for now you might find [this helper](https://github.com/twohill/silverstripe-phpstorm-graphql) useful.
+
 ## Authentication is a bit hard ##
 
-This isn't directly related to GraphQL, but SilverStripe 4 has an all new authentication system. I'm told it's *wonderful* but it really does feel like a [dishwasher api](https://www.silverstripe.org/blog/cutting-through-the-noise-why-silverstripe-4-will-use-reactjs/#Diswashers_have_terrible_APIs_33).
+This isn't directly related to GraphQL, but SilverStripe 4 has an all new authentication system. Sure it's more flexible, but it really does feel like a [dishwasher api](https://www.silverstripe.org/blog/cutting-through-the-noise-why-silverstripe-4-will-use-reactjs/#Diswashers_have_terrible_APIs_33).
 
 Compare this login with SS3:
 
@@ -39,7 +45,7 @@ Injector::inst()->get(IdentityStore::class)->logIn($member);
 
 ```
 
-WTF is Injector? WTF is IdentityStore? I don't know and I don't care but it seems this is what I need to use to log in right now. ¯\\\_(ツ)\_/¯
+WTF is Injector? WTF is IdentityStore? I don't know and I don't care but this is what I need to use to log in now. ¯\\\_(ツ)\_/¯
 
 Most of the time you'll probably just want to use session based authentication, so the most straightforward way to log in is to get the user to log in via normal SilverStripe methods first before showing the react app.
 
@@ -149,9 +155,9 @@ Now, if webpack is running it will connect directly to that, otherwise it will u
 
 ## Simplify deployment ##
 
-There's probably something a lot smarter that you could do here, but I was in a hurry to ship and couldn't deal with parsing map files :P
+There's probably something a lot smarter that you could do here, but I was in a hurry to ship and couldn't deal with parsing map files 😜
 
-Instead, I hacked the build script in `package.json` to move my files to static names.
+Instead, I hacked the build script in `package.json` to move my files to static names:
 
 ```json
 
@@ -164,7 +170,7 @@ Instead, I hacked the build script in `package.json` to move my files to static 
   }
 
 ```
-If you've got a better way I'm all ears!
+Now I can link to `/resources/app/client/build/main.js` and `/resources/app/client/build/main.css` without worrying. Of course, this breaks the cache-busting, so if you've got a better way I'm all ears!
 
 ## Handle javascript URLs nicely ##
 

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" type="text/css" href="{{ '/assets/css/print.css' | relative_url }}" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+{% seo %}
+{% if site.google_analytics %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ site.google_analytics }}');
+</script>
+{% endif %}
+
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+        <header>
+          <h1>{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+          {% if page.description %}<h2>{{ page.description }}</h2>{% endif %}
+        </header>
+        
+        {% if post %}
+            {% assign categories = post.categories %}
+        {% else %}
+            {% assign categories = page.categories %}
+        {% endif %}
+            
+        <div class="post-categories">
+            <p>
+            {% if page.url == '/' %}
+            {% else %}
+                <a href="/" title="back Home">Home</a>.
+            {% endif %}
+
+            {% if categories %}
+                Filed under:
+                {% for category in categories %}
+                    <a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>{% unless forloop.last %}, {% endunless %}
+                {% endfor %}
+            {% endif %}
+            </p>
+          </div>
+          
+        <hr>
+        <section id="main_content">
+          {{ content }}
+        </section>
+
+        <footer>
+        {% if site.github.is_project_page %}
+          {{ site.title | default: site.github.repository_name }} is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a><br>
+        {% endif %}
+          This page generated and hosted with ❤ by <a href="https://pages.github.com">GitHub Pages</a>.
+        </footer>
+
+      </div>
+    </div>
+  </body>
+</html>
