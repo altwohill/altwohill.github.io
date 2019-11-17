@@ -48,6 +48,6 @@ Extensions installed in WSL:
   * To get the most out of Intelephense you need to disable the built-in PHP Language Features (follow the quickstart guide)
   * Make sure you set the phpcs.standard to what your project adheres to, otherwise all the warnings will make you really sad
 
-  ## Wrap-up ##
+## Wrap-up ##
 
-  That's all for now. I'm new to VSCode so if you've got any great tips let me know via the comments. As I iterate on this environment I'll try and keep this page updated.
+That's all for now. I'm new to VSCode so if you've got any great tips let me know via the comments. As I iterate on this environment I'll try and keep this page updated.
