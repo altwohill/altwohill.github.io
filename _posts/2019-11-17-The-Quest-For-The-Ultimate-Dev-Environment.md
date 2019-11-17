@@ -12,7 +12,9 @@ I recently rebuilt my PC using the latest Windows Insider build in order to take
 ## Visual Studio Code - First Impressions ##
 
 Number one: it is fast. Unbelievably so! The workspace opens instantly, and there's no delays searching. There's some magic pixie dust in there I'm sure.
+
 Number two: VSCode Remote is a game-changer. Essentially the editor is split into a client/server, and the server runs directly in my WSL2 virtual machine. Broken file watchers are a thing of the past.
+
 Number three: for PHP development, it's kinda...basic. At least to start with. As I've discovered, there are a plethora of extensions that enhance the editor in almost every way imaginable.
 
 ## Configuration ##
@@ -21,11 +23,11 @@ Because a large amount of the functionality is in the extensions, I'm likely to 
 
 ### Basics ### 
 
-You need to be running Windows 10 build 18917 (currently Insider Preview) in order to get and [install WSL2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-instal). You'll also need Docker build 36883 or higher (currently edge channel) and [enable WSL2 in Docker](https://docs.docker.com/docker-for-windows/wsl-tech-preview).
+You need to be running Windows 10 build 18917 (currently Insider Preview) in order to get and [install WSL2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install). You'll also need Docker build 36883 or higher (currently edge channel) and [enable WSL2 in Docker](https://docs.docker.com/docker-for-windows/wsl-tech-preview).
 
 ### Extensions ###
 
-With VSCode Remote, extensions can be installed locally (ie in your profile or workspace) or remotely. WSL2 acts as a remote environment. So, the first extension we need, and the one you'll probably be prompted for when VSCode detects the precence of WSL2 is  [Remote - WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl). 
+With VSCode Remote, extensions can be installed locally (ie in your profile or workspace) or remotely. WSL2 acts as a remote environment. So, the first extension we need, and the one you'll probably be prompted for when VSCode detects the presence of WSL2 is  [Remote - WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl). 
 
 I do have some other extensions installed locally, but they're mainly for convenience, not development.
 
