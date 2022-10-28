@@ -3,7 +3,7 @@ title: "Setting Up Dev Environment"
 categories: [Dev,Web]
 ---
 
-I guess this is a follow-up to a previous post [The Quest For The Ultimate Dev Environment](2019-11-17-The-Quest-For-The-Ultimate-Dev-Environment). Some of the setup has gotten simpler with advances in technology as well as synching.
+I guess this is a follow-up to a previous post [The Quest For The Ultimate Dev Environment](/2019/The-Quest-For-The-Ultimate-Dev-Environment). Some of the setup has gotten simpler with advances in technology as well as synching.
 I've recently rebuilt my PC with Windows 11 so these are some notes on the current set up.
 
 ### Install WSL2 ###
